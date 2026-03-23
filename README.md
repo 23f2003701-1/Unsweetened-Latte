@@ -18,28 +18,7 @@
 
 ---
 
-## Deliverables
-
-| File | Description |
-|------|-------------|
-| `FIXED_Credit_Risk_Model.ipynb` | All 16 bugs corrected, fully documented with markdown cells explaining each fix |
-| `OPTIMIZED_Credit_Risk_Model.ipynb` | 6 models benchmarked, cross-validated, with full comparison and visualizations |
-| `README_Submission.md` | This file |
-
-**Checklist:**
-- [x] Notebook runs without errors
-- [x] All cells execute successfully
-- [x] Markdown cells document each fix
-- [x] Final metrics clearly displayed
-- [x] Confusion matrix shown
-- [x] Code is clean and commented
-- [x] 16 errors identified and fixed (challenge minimum: 8, top teams: 12+)
-
----
-
-## All 16 Bugs Fixed
-
-### Critical Bugs — Would invalidate the model entirely
+### Critical Bugs 
 
 | # | Bug | Where | Fix Applied |
 |---|-----|--------|-------------|
@@ -307,21 +286,3 @@ Our fixed model achieves ROC-AUC of **0.9114**, which:
 The optimized models (XGBoost, Ensemble) push further to **~0.92–0.93**, catching approximately **70–75 out of 107 defaults** vs. 64 from the baseline, representing a meaningful improvement in business value.
 
 ---
-
-## Scoring Summary (vs. Rubric)
-
-| Component | Max Points | Our Score | Justification |
-|-----------|-----------|-----------|---------------|
-| Model Performance (ROC-AUC >0.85) | 3 | **3 / 3** | 0.9114 → well above 0.85 threshold |
-| Models / Algorithms (2pt each, max 6) | 6 | **6 / 6** | RF + GBM + LR + XGBoost + Ensemble + Recall-Optimized = 6 models |
-| Code Quality | — | ✓ | Documented, modular, follows sklearn best practices |
-| Explanation | — | ✓ | Each bug explained with root cause and fix rationale |
-| Bonus (correct prime metric identified) | 1 | **1 / 1** | ROC-AUC justified with full metric hierarchy |
-
-**Estimated total: 10 / 10 + bonus**
-
----
-
-*Bugs found: 16 / 14 (exceeded challenge count — 2 additional bugs identified beyond the stated 14)*
-*Prime metric: ROC-AUC (with PR-AUC as secondary for severe imbalance)*
-*Final model: XGBoost with `scale_pos_weight` or Voting Ensemble for production stability*

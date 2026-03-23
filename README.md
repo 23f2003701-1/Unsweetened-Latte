@@ -1,7 +1,6 @@
 # Unsweetened-Latte
 
 # Credit Risk Model — Debugging & Optimization
-## AI Model Fix Challenge | Submission README
 
 ---
 
